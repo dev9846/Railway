@@ -23,8 +23,8 @@
                 <br/>
 
                 <div style="height: 45px; width: 300px;">
-                    <input type="submit" name="Login" class="newButtonLink" />
-                    <input type="reset" name="Cancel" class="newButtonLink" />
+                    <input type="submit" value="Login" name="Login" class="newButtonLink" />
+                    <input type="reset" name="Cancel" value="Cancel" class="newButtonLink" />
                 </div>
                 <div style="padding: 16px; font-size: 12px;">
                     <a href="#" >Forgot Password?</a>&nbsp;|&nbsp;
