@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author Krupal
+ * @author Dev
  */
 public class UserTData {
 
@@ -32,6 +32,7 @@ public class UserTData {
         try {
             while (rs.next()) {
                 user = new UserT();
+                user.setUserId(rs.getInt("UserId"));
                 user.setUsername(rs.getString("Username"));
                 user.setPassword(rs.getString("Password"));
                 users.add(user);
@@ -49,7 +50,7 @@ public class UserTData {
 
         try {
             while (rs.next()) {
-
+                user.setUserId(rs.getInt("UserId"));
                 user.setUsername(rs.getString("Username"));
                 user.setPassword(rs.getString("Password"));
             }

@@ -10,7 +10,8 @@ package DbClasses;
  */
 public class TrainSchedule {
     
-    private int scheduleId,trainId,trainDate,stationId,arrivalTime,departure,distance;
+    private int scheduleId,trainId,stationId,distance;
+    private String trainDate, arrivalTime, departure ;
 
     /**
      * @return the scheduleId
@@ -41,20 +42,6 @@ public class TrainSchedule {
     }
 
     /**
-     * @return the trainDate
-     */
-    public int getTrainDate() {
-        return trainDate;
-    }
-
-    /**
-     * @param trainDate the trainDate to set
-     */
-    public void setTrainDate(int trainDate) {
-        this.trainDate = trainDate;
-    }
-
-    /**
      * @return the stationId
      */
     public int getStationId() {
@@ -66,34 +53,6 @@ public class TrainSchedule {
      */
     public void setStationId(int stationId) {
         this.stationId = stationId;
-    }
-
-    /**
-     * @return the arrivalTime
-     */
-    public int getArrivalTime() {
-        return arrivalTime;
-    }
-
-    /**
-     * @param arrivalTime the arrivalTime to set
-     */
-    public void setArrivalTime(int arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
-
-    /**
-     * @return the departure
-     */
-    public int getDeparture() {
-        return departure;
-    }
-
-    /**
-     * @param departure the departure to set
-     */
-    public void setDeparture(int departure) {
-        this.departure = departure;
     }
 
     /**
@@ -109,6 +68,49 @@ public class TrainSchedule {
     public void setDistance(int distance) {
         this.distance = distance;
     }
+
+    /**
+     * @return the trainDate
+     */
+    public String getTrainDate() {
+        return trainDate;
+    }
+
+    /**
+     * @param trainDate the trainDate to set
+     */
+    public void setTrainDate(String trainDate) {
+        this.trainDate = trainDate;
+    }
+
+    /**
+     * @return the arrivalTime
+     */
+    public String getArrivalTime() {
+        return arrivalTime;
+    }
+
+    /**
+     * @param arrivalTime the arrivalTime to set
+     */
+    public void setArrivalTime(String arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    /**
+     * @return the departure
+     */
+    public String getDeparture() {
+        return departure;
+    }
+
+    /**
+     * @param departure the departure to set
+     */
+    public void setDeparture(String departure) {
+        this.departure = departure;
+    }
+    
     
     
 }
