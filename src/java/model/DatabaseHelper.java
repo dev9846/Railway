@@ -30,7 +30,8 @@ public class DatabaseHelper {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Here");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trainsystem?zeroDateTimeBehavior=convertToNull","dev","dev");
+            //con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trainsystem?zeroDateTimeBehavior=convertToNull","dev","dev");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trainsystem?zeroDateTimeBehavior=convertToNull","root","");
             System.out.println("after con");
             Statement stmt = con.createStatement();
             rs = stmt.executeQuery(sqlQuery);
