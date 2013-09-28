@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Krupal
+ * @author Dev
  */
 public class DatabaseHelper {
 

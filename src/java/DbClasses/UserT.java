@@ -6,12 +6,14 @@ package DbClasses;
 
 /**
  *
- * @author Krupal
+ * @author Dev
  */
 public class UserT {
     
+    private int userId;
     private String username;
     private String password;
+    
 
     /**
      * @return the username
@@ -39,6 +41,20 @@ public class UserT {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * @return the userId
+     */
+    public int getUserId() {
+        return userId;
+    }
+
+    /**
+     * @param userId the userId to set
+     */
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
     
 }
