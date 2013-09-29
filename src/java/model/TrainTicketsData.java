@@ -15,17 +15,17 @@ import java.util.List;
  * @author Dev
  */
 public class TrainTicketsData {
-    
+
     DatabaseHelper db;
-    
-    public TrainTicketsData(){
-    
+
+    public TrainTicketsData() {
+
         db = new DatabaseHelper();
-}
-    
-     public ArrayList<DbClasses.TrainTickets> getTrainTickets() {
+    }
+
+    public ArrayList<DbClasses.TrainTickets> getTrainTickets() {
         ArrayList<DbClasses.TrainTickets> tickets = new ArrayList<TrainTickets>();
-        
+
 
         ResultSet rs = db.getResultSet("Select * From TrainTickets");
         TrainTickets ticket;
@@ -43,7 +43,8 @@ public class TrainTicketsData {
                 ticket.setCC(rs.getInt("CC"));
                 ticket.setSL(rs.getInt("SL"));
                 ticket.set2S(rs.getInt("2S"));
-                               
+                ticket.setTotalTickets(rs.getInt("TotalTickets"));
+
                 tickets.add(ticket);
             }
         } catch (SQLException se) {
@@ -51,15 +52,15 @@ public class TrainTicketsData {
         return tickets;
     }
 
-     public TrainTickets getTrainTicket(int ticketId) {
+    public TrainTickets getTrainTicket(int ticketId) {
 
-           
-        ResultSet rs = db.getResultSet("Select * From traintickets where TicketId = "+ticketId);
+
+        ResultSet rs = db.getResultSet("Select * From traintickets where TicketId = " + ticketId);
         TrainTickets ticket = new TrainTickets();
 
         try {
             while (rs.next()) {
-                
+
                 ticket.setTicketId(rs.getInt("ticketId"));
                 ticket.setTrainId(rs.getInt("TrainID"));
                 ticket.set1A(rs.getInt("1A"));
@@ -70,16 +71,11 @@ public class TrainTicketsData {
                 ticket.setCC(rs.getInt("CC"));
                 ticket.setSL(rs.getInt("SL"));
                 ticket.set2S(rs.getInt("2S"));
-                
+                ticket.setTotalTickets(rs.getInt("TotalTickets"));
+
             }
         } catch (SQLException se) {
         }
         return ticket;
     }
-
-         
-
-     
-    
 }
-    
