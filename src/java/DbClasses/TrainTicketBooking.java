@@ -10,9 +10,8 @@ package DbClasses;
  */
 public class TrainTicketBooking {
     
-    private int bookingId, trainId, ticketId, scheduleId, age ;
-    private String PasssengerName, sex ;
-    private boolean SC ;
+    private int bookingId, trainId, ticketBookingMasterId, scheduleToId, scheduleFromId, ticketFareId, userId ;
+    private String BookingDate ;
 
     /**
      * @return the bookingId
@@ -43,87 +42,87 @@ public class TrainTicketBooking {
     }
 
     /**
-     * @return the ticketId
+     * @return the ticketBookingMasterId
      */
-    public int getTicketId() {
-        return ticketId;
+    public int getTicketBookingMasterId() {
+        return ticketBookingMasterId;
     }
 
     /**
-     * @param ticketId the ticketId to set
+     * @param ticketBookingMasterId the ticketBookingMasterId to set
      */
-    public void setTicketId(int ticketId) {
-        this.ticketId = ticketId;
+    public void setTicketBookingMasterId(int ticketBookingMasterId) {
+        this.ticketBookingMasterId = ticketBookingMasterId;
     }
 
     /**
-     * @return the scheduleId
+     * @return the ticketFareId
      */
-    public int getScheduleId() {
-        return scheduleId;
+    public int getTicketFareId() {
+        return ticketFareId;
     }
 
     /**
-     * @param scheduleId the scheduleId to set
+     * @param ticketFareId the ticketFareId to set
      */
-    public void setScheduleId(int scheduleId) {
-        this.scheduleId = scheduleId;
+    public void setTicketFareId(int ticketFareId) {
+        this.ticketFareId = ticketFareId;
     }
 
     /**
-     * @return the age
+     * @return the BookingDate
      */
-    public int getAge() {
-        return age;
+    public String getBookingDate() {
+        return BookingDate;
     }
 
     /**
-     * @param age the age to set
+     * @param BookingDate the BookingDate to set
      */
-    public void setAge(int age) {
-        this.age = age;
+    public void setBookingDate(String BookingDate) {
+        this.BookingDate = BookingDate;
     }
 
     /**
-     * @return the PasssengerName
+     * @return the scheduleToId
      */
-    public String getPasssengerName() {
-        return PasssengerName;
+    public int getScheduleToId() {
+        return scheduleToId;
     }
 
     /**
-     * @param PasssengerName the PasssengerName to set
+     * @param scheduleToId the scheduleToId to set
      */
-    public void setPasssengerName(String PasssengerName) {
-        this.PasssengerName = PasssengerName;
+    public void setScheduleToId(int scheduleToId) {
+        this.scheduleToId = scheduleToId;
     }
 
     /**
-     * @return the sex
+     * @return the scheduleFrom
      */
-    public String getSex() {
-        return sex;
+    public int getScheduleFromId() {
+        return scheduleFromId;
     }
 
     /**
-     * @param sex the sex to set
+     * @param scheduleFrom the scheduleFrom to set
      */
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setScheduleFromId(int scheduleFromId) {
+        this.scheduleFromId = scheduleFromId;
     }
 
     /**
-     * @return the SC
+     * @return the userId
      */
-    public boolean isSC() {
-        return SC;
+    public int getUserId() {
+        return userId;
     }
 
     /**
-     * @param SC the SC to set
+     * @param userId the userId to set
      */
-    public void setSC(boolean SC) {
-        this.SC = SC;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
     
     
