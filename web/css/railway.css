@@ -188,7 +188,7 @@ hr{ display: block; height: 1px;
 
 .fromTo{
     width: 230px;
-    height: 400px;
+    height: 350px;
     border-radius: 7px;
     padding: 8px 25px;
     float: left;
@@ -199,8 +199,8 @@ hr{ display: block; height: 1px;
 }
 
 .trainList{
-    width: 430px;
-    height: 500px;
+    width: 640px;
+    height: 350px;
     border-radius: 7px;
     padding: 8px 25px;
     margin-left: 300px;
@@ -209,6 +209,32 @@ hr{ display: block; height: 1px;
     /*box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);*/
     background-color: #efefef;
 }
+
+.fareInfo{
+    width: 280px;
+    height: 220px;
+    border-radius: 7px;
+    padding: 8px 25px;
+    margin-left: 300px;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    /*box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);*/
+    background-color: #efefef;
+}
+
+.seatInfo{
+    width: 280px;
+    height: 220px;
+    float: right;
+    border-radius: 7px;
+    padding: 8px 25px;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    /*box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);*/
+    background-color: #efefef;
+}
+
+
 
 .textbox {
     background-position: left;
@@ -229,4 +255,10 @@ hr{ display: block; height: 1px;
 h4{
     padding: 0px;
     margin: 10px 0px 10px 0px;
+}
+
+th{
+    background: #4391df;
+    /*background: dodgerblue;*/
+    color: #fff;
 }
