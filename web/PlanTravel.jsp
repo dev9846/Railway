@@ -27,15 +27,62 @@
                     <input type="submit" name="Find" value="Find" class="newButtonLink" />
                 </div>
             </div>
-             <div class="seatInfo">
+             <div class="seatInfo" id="divSeatInfo">
                   <div style="margin: 0 auto; width: 70px" ><h4 style="color: #4391df">Seat Info</h4></div>
-                  <table></table>
+                  <table style="width: 280px; padding: 0px; margin: 0px">
+                      <tr>
+                          <td>
+                              <h5>28/9/2013</h5>
+                          </td>
+                          <td>
+                              <h5>Available - 100</h5>
+                          </td>
+                          <td>
+                              <input type="submit" style="width: 70px; height:25px; float: right" value="Book" class="bookButtonLink"/>
+                          </td>
+                      </tr>
+                  </table>
             </div>
-            <div class="fareInfo">
+            <div class="fareInfo" id="divFareInfo">
                   <div style="margin: 0 auto; width: 70px" ><h4 style="color: #4391df">Fare Info</h4></div>
+                  <table style="width: 280px">
+                      <tr>
+                          <td>
+                              <b>Fare: </b> Rs. 100
+                              
+                          </td>
+                          <td>
+                              <b>Class: </b> 2S
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <b>From: </b> PUNE
+                          </td>
+                          <td>
+                              <b>To: </b>  Dadar
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <b>Train Name: </b> Intercity
+                          </td>
+                          <td>
+                              <b>Train No: </b> 10111
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <b>Train: </b> Super Fast
+                          </td>
+                          <td>
+                              <b>Distance: </b> 200 KMS
+                          </td>
+                      </tr>
+                  </table>
             </div>
             <br/>
-            <div class="trainList">
+            <div class="trainList" id="divListOfTrains">
                 <div style="margin: 0 auto; width: 150px" ><h4 style="color: #4391df">List of Trains</h4></div>
                 <br />
                 <table>

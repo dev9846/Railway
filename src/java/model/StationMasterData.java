@@ -10,23 +10,22 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  *
  * @author Dev
  */
 public class StationMasterData {
-    
-    DatabaseHelper db ;
-    
+
+    DatabaseHelper db;
+
     public StationMasterData() {
-    
+
         db = new DatabaseHelper();
-}
-    
-     public ArrayList<DbClasses.StationMaster> getStations() {
+    }
+
+    public ArrayList<DbClasses.StationMaster> getStations() {
         ArrayList<DbClasses.StationMaster> stations = new ArrayList<StationMaster>();
-        
+
 
         ResultSet rs = db.getResultSet("Select * From stationmaster");
         StationMaster station;
@@ -37,7 +36,7 @@ public class StationMasterData {
                 station.setStationId(rs.getInt("StationId"));
                 station.setStationName(rs.getString("StationName"));
                 station.setStationCode(rs.getString("StationCode"));
-                               
+
                 stations.add(station);
             }
         } catch (SQLException se) {
@@ -47,17 +46,17 @@ public class StationMasterData {
 
     public StationMaster getStation(int stationId) {
 
-           
-        ResultSet rs = db.getResultSet("Select * From stationmaster where StationId = "+stationId);
+
+        ResultSet rs = db.getResultSet("Select * From stationmaster where StationId = " + stationId);
         StationMaster station = new StationMaster();
 
         try {
             while (rs.next()) {
                 station.setStationId(rs.getInt("StationId"));
-              station.setStationName(rs.getString("StationName"));
+                station.setStationName(rs.getString("StationName"));
                 station.setStationCode(rs.getString("StationCode"));
-                
-                
+
+
             }
         } catch (SQLException se) {
         }
@@ -66,28 +65,20 @@ public class StationMasterData {
 
     public StationMaster getStation(String stationName) {
 
-           
-        ResultSet rs = db.getResultSet("Select * From StationMaster where StationName = "+stationName);
+
+        ResultSet rs = db.getResultSet("Select * From StationMaster where StationName = " + stationName);
         StationMaster station = new StationMaster();
 
         try {
             while (rs.next()) {
 
                 station.setStationId(rs.getInt("StationId"));
-              station.setStationName(rs.getString("StationName"));
+                station.setStationName(rs.getString("StationName"));
                 station.setStationCode(rs.getString("StationCode"));
-                
-                
+
             }
         } catch (SQLException se) {
         }
         return station;
     }
-
-
-    
-    
-    
-    
-    
 }
