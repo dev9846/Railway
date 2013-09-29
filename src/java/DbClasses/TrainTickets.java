@@ -10,7 +10,7 @@ package DbClasses;
  */
 public class TrainTickets {
     
-    private int ticketId,trainId,_1A,_FC,_2A,_3A,_3E,_CC,_SL,_2S;
+    private int ticketId,trainId,_1A,_FC,_2A,_3A,_3E,_CC,_SL,_2S, totalTickets;
 
     /**
      * @return the ticketId
@@ -150,6 +150,20 @@ public class TrainTickets {
      */
     public void set2S(int _2S) {
         this._2S = _2S;
+    }
+
+    /**
+     * @return the totalTickets
+     */
+    public int getTotalTickets() {
+        return totalTickets;
+    }
+
+    /**
+     * @param totalTickets the totalTickets to set
+     */
+    public void setTotalTickets(int totalTickets) {
+        this.totalTickets = totalTickets;
     }
     
     
