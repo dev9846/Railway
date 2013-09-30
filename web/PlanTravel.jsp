@@ -14,15 +14,18 @@
             <br/>
             <div class="fromTo">
                 <h4 style="font-family: calibri">Station From</h4>
-                <input type="text" name="txtStationFrom" id="txtStationFrom" value="Pune" placeholder="Station From" class="textbox"/>
+                <input type="text" name="txtStationFrom" id="txtStationFrom" value="Pune" placeholder="Station Name" class="textbox"/>
+                <div id="divSuggest" style="width: 100px; display: none; height: 50px; position: absolute; background: white; z-index: 1">
+                 manas
+                </div>
                 <br/>
                 <br/>
                 <h4 style="font-family: calibri">Station To</h4>
-                <input type="text" name="txtStationTo" placeholder="Station To" value="Dadar" id="txtStationTo" class="textbox"/>
+                <input type="text" name="txtStationTo" placeholder="Station Name" value="Dadar" id="txtStationTo" class="textbox"/>
                 <br/>
                 <br/>
                 <h4 style="font-family: calibri">Date</h4>
-                <input type="text" name="txtDate" placeholder="Date" id="txtDate" value="29/09/2013" class="textbox"/>
+                <input type="text" name="txtDate" placeholder="Eg. 29/09/2013" id="txtDate" value="29/09/2013" class="textbox"/>
                 <br/>
                 <br/>
                 <div style="margin: 0 auto; width: 100px ">

@@ -13,7 +13,20 @@ function btnFindClick(){
         }
     });
 }
+/*
+function getValues(){
+    $("#divSuggest").show(1000);
+    $("#divSuggest").html("<table><tr><td>Manas</td></tr><tr><td>Krupal</td></tr></table>");
+}
 
+$("#divSuggest").focusout(function(){
+    $("#divSuggest").hide(1000);
+});
+
+$("#divSuggest").blur(function(){
+    $("#divSuggest").hide(1000);
+});
+*/
 function rdoClick(id){
     $.ajax({
         type: "POST",
