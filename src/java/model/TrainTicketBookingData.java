@@ -78,7 +78,8 @@ public class TrainTicketBookingData {
     }
     
     public int getCurrentBookingId() {
-        ResultSet rs = db.getResultSet("Select MAX(BookingId) From TrainTicketBooking");
+        ResultSet rs = db.getResultSet("Select Max(BookingId) as BookingId\n" +
+"From trainticketbooking");
         int bkId = 0;
         try {
             while (rs.next()) {
@@ -91,6 +92,6 @@ public class TrainTicketBookingData {
     }
     
     public void insertTrainTicketBooking(TrainTicketBooking ttb) {
-        db.getResultSet("Insert into TrainTicketBooking Values(null, " + ttb.getTrainId() + ", " + ttb.getTicketFareId() + "," + ttb.getScheduleFromId() + ", " + ttb.getScheduleToId() + ", " + ttb.getTicketBookingMasterId() + ", '" + ttb.getBookingDate() + "', " + ttb.getUserId() + ", "+ttb.getQuantity()+")");
+        db.executeQuery("Insert into TrainTicketBooking Values(null, " + ttb.getTrainId() + ", " + ttb.getTicketFareId() + "," + ttb.getScheduleFromId() + ", " + ttb.getScheduleToId() + ", " + ttb.getTicketBookingMasterId() + ", '" + ttb.getBookingDate() + "', " + ttb.getUserId() + ", "+ttb.getQuantity()+")");
     }
 }

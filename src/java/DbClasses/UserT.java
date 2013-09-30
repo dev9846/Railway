@@ -10,9 +10,10 @@ package DbClasses;
  */
 public class UserT {
     
-    private int userId;
+    private int userId, age;
+    private double mobileNo;
     private String username;
-    private String password;
+    private String password, name, sex;
     
 
     /**
@@ -55,6 +56,62 @@ public class UserT {
      */
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    /**
+     * @return the age
+     */
+    public int getAge() {
+        return age;
+    }
+
+    /**
+     * @param age the age to set
+     */
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    /**
+     * @return the mobileNo
+     */
+    public double getMobileNo() {
+        return mobileNo;
+    }
+
+    /**
+     * @param mobileNo the mobileNo to set
+     */
+    public void setMobileNo(double mobileNo) {
+        this.mobileNo = mobileNo;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return the sex
+     */
+    public String getSex() {
+        return sex;
+    }
+
+    /**
+     * @param sex the sex to set
+     */
+    public void setSex(String sex) {
+        this.sex = sex;
     }
     
 }

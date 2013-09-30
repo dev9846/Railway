@@ -35,6 +35,10 @@ public class UserTData {
                 user.setUserId(rs.getInt("UserId"));
                 user.setUsername(rs.getString("Username"));
                 user.setPassword(rs.getString("Password"));
+                user.setAge(rs.getInt("Age"));
+                user.setMobileNo(Double.parseDouble(rs.getString("MobileNo")));
+                user.setName(rs.getString("Name"));
+                user.setSex(rs.getString("Sex"));
                 users.add(user);
             }
         } catch (SQLException se) {
@@ -44,8 +48,8 @@ public class UserTData {
 
     public UserT getUser(String username, String password) {
 
-           
-        ResultSet rs = db.getResultSet("Select * From UserT Where Username='"+username+"' and Password = '"+password+"'");
+
+        ResultSet rs = db.getResultSet("Select * From UserT Where Username='" + username + "' and Password = '" + password + "'");
         UserT user = new UserT();
 
         try {
@@ -53,15 +57,16 @@ public class UserTData {
                 user.setUserId(rs.getInt("UserId"));
                 user.setUsername(rs.getString("Username"));
                 user.setPassword(rs.getString("Password"));
+                user.setAge(rs.getInt("Age"));
+                user.setMobileNo(Double.parseDouble(rs.getString("MobileNo")));
+                user.setName(rs.getString("Name"));
+                user.setSex(rs.getString("Sex"));
             }
         } catch (SQLException se) {
         }
         return user;
     }
 
-
-
-        
     public UserT getTestUser() {
 
         UserT user = new UserT();

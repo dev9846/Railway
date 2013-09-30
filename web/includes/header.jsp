@@ -4,10 +4,11 @@
 <div class="main-menu">
     <ul>
         <li>
-           <span class="menu-icon">Pizza</span>
+           <img src="<%=request.getContextPath()%>/images/home.png" />
+            <a href="#"><span class="menu-icon">Home</span></a>
         </li>
         <li>
-            <img src="<%=request.getContextPath()%>/images/dessert_icon.png" />
+            <img src="<%=request.getContextPath()%>/images/cal.png" />
             <a href="#"><span class="menu-icon">Plan Travel</span></a>
         </li>
     </ul>

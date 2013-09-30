@@ -83,6 +83,7 @@ public class PlanTravelController extends HttpServlet {
                         if (schedule.getStationId() == stationFrom.getStationId()) {
                             count = 1;
                             bookingDetails.setDepartureTime(schedule.getDeparture());
+                            bookingDetails.setScheduleFromId(schedule.getScheduleId());
                             fromDistance = schedule.getDistance();
                             continue;
                         }
@@ -90,6 +91,7 @@ public class PlanTravelController extends HttpServlet {
                             if (count == 1) {
                                 count = 2;
                                 bookingDetails.setArrivalTime(schedule.getArrivalTime());
+                                bookingDetails.setScheduleToId(schedule.getScheduleId());
                                 toDistance = schedule.getDistance();
                                 break;
                             }
@@ -105,6 +107,8 @@ public class PlanTravelController extends HttpServlet {
                     bookingDetails.setStationTo(stnTo);
                     bookingDetails.setTrainId(train.getTrainId());
                     bookingDetails.setDistance(toDistance - fromDistance);
+                    bookingDetails.setStationFromId(stationFrom.getStationId());
+                    bookingDetails.setStationToId(stationTo.getStationId());
                     arrBookingDetails.add(bookingDetails);
                 }
             }
@@ -174,6 +178,8 @@ public class PlanTravelController extends HttpServlet {
 
             TicketBookingMaster tbm = new model.TicketBookingMasterData().getTBMDetails(bd.getTrainId(), bd.getTrainDate());
 
+            bd.setFare(getFare(ticketFare, bd.getSeatClass()));
+            
             String innerText = "<div class=\"seatInfo\" id=\"divSeatInfo\">\n"
                     + "                    <div style=\"margin: 0 auto; width: 70px\" ><h4 style=\"color: #4391df\">Seat Info</h4></div>\n"
                     + "                    <table style=\"width: 330px; padding: 0px; margin: 0px\">\n"
@@ -203,7 +209,7 @@ public class PlanTravelController extends HttpServlet {
                     + "                  <table style=\"width: 280px\">\n"
                     + "                      <tr>\n"
                     + "                          <td>\n"
-                    + "                              <b>Fare: </b> " + getFare(ticketFare, bd.getSeatClass()) + "\n"
+                    + "                              <b>Fare: </b> " + bd.getFare() + "\n"
                     + "                              \n"
                     + "                          </td>\n"
                     + "                          <td>\n"
@@ -238,7 +244,7 @@ public class PlanTravelController extends HttpServlet {
             
             //ArrayList<BookingDetails> arr = new ArrayList<BookingDetails>();
             //arr.add(bd);
-            
+            bd.setTicketFareId(ticketFare.getTicketFareId());
             arrBookingDetails.set(index - 1, bd);
              request.getSession().setAttribute("BookingDetails", arrBookingDetails);
              request.getSession().setAttribute("SelectedBooking", bd);

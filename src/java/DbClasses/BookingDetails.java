@@ -9,9 +9,8 @@ package DbClasses;
  * @author Dev
  */
 public class BookingDetails {
-    private int trainNo, trainId, fare, distance, seatsAvailable;
+    private int trainNo, trainId, fare, distance, seatsAvailable, bookingId, qty, ticketFareId, stationFromId, stationToId, scheduleFromId, scheduleToId;
     private String trainName, departureTime, arrivalTime, seatClass, stationFrom, stationTo, trainType, trainDate;
-
     /**
      * @return the trainNo
      */
@@ -192,6 +191,104 @@ public class BookingDetails {
      */
     public void setTrainId(int trainId) {
         this.trainId = trainId;
+    }
+
+    /**
+     * @return the bookingId
+     */
+    public int getBookingId() {
+        return bookingId;
+    }
+
+    /**
+     * @param bookingId the bookingId to set
+     */
+    public void setBookingId(int bookingId) {
+        this.bookingId = bookingId;
+    }
+
+    /**
+     * @return the qty
+     */
+    public int getQty() {
+        return qty;
+    }
+
+    /**
+     * @param qty the qty to set
+     */
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+
+    /**
+     * @return the ticketFareId
+     */
+    public int getTicketFareId() {
+        return ticketFareId;
+    }
+
+    /**
+     * @param ticketFareId the ticketFareId to set
+     */
+    public void setTicketFareId(int ticketFareId) {
+        this.ticketFareId = ticketFareId;
+    }
+
+    /**
+     * @return the stationFromId
+     */
+    public int getStationFromId() {
+        return stationFromId;
+    }
+
+    /**
+     * @param stationFromId the stationFromId to set
+     */
+    public void setStationFromId(int stationFromId) {
+        this.stationFromId = stationFromId;
+    }
+
+    /**
+     * @return the stationToId
+     */
+    public int getStationToId() {
+        return stationToId;
+    }
+
+    /**
+     * @param stationToId the stationToId to set
+     */
+    public void setStationToId(int stationToId) {
+        this.stationToId = stationToId;
+    }
+
+    /**
+     * @return the scheduleFromId
+     */
+    public int getScheduleFromId() {
+        return scheduleFromId;
+    }
+
+    /**
+     * @param scheduleFromId the scheduleFromId to set
+     */
+    public void setScheduleFromId(int scheduleFromId) {
+        this.scheduleFromId = scheduleFromId;
+    }
+
+    /**
+     * @return the scheduleToId
+     */
+    public int getScheduleToId() {
+        return scheduleToId;
+    }
+
+    /**
+     * @param scheduleToId the scheduleToId to set
+     */
+    public void setScheduleToId(int scheduleToId) {
+        this.scheduleToId = scheduleToId;
     }
     
 }

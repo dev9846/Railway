@@ -80,7 +80,7 @@ public class TicketBookingMasterData {
     }
 
     public void updateTicketBookingMaster(TicketBookingMaster tbm) {
-        ResultSet rs = db.getResultSet("Update TicketBookingMaster SET 1A = " + tbm.get1A() + ", 2A = " + tbm.get2A() + ", 2S = " + tbm.get2S() + ", 3A = " + tbm.get3A() + ", 3E = " + tbm.get3E() + ", CC = " + tbm.getCC() + ", FC = " + tbm.getFC() + ", SL = " + tbm.getSL() + ", TicketsBooked = " + tbm.getTicketsBooked() + "");
+        db.executeQuery("Update TicketBookingMaster SET 1A = " + tbm.get1A() + ", 2A = " + tbm.get2A() + ", 2S = " + tbm.get2S() + ", 3A = " + tbm.get3A() + ", 3E = " + tbm.get3E() + ", CC = " + tbm.getCC() + ", FC = " + tbm.getFC() + ", SL = " + tbm.getSL() + ", TicketsBooked = " + tbm.getTicketsBooked() + "");
         
     }
 }

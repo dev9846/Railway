@@ -42,8 +42,22 @@ function rdoClick(id){
 }
 
 function btnBookTicketClick(){
-    alert("hi");
-    window.location.href = "BookingConfirmation.jsp";
+    var qty = document.getElementById("txtQty").value;
+    window.location = "BookingConfirmation.jsp?qty=" + qty;
 }
+
+function btnConfirmBookingClick(){
+     $.ajax({
+        type: "POST",
+        url: 'BookingConfirmationController',
+        data: {
+            load: "False"
+        },
+        success: function(data) {
+            alert("Your Ticket has been Confirmed..\nBooking Id = " + data);
+        }
+    });
+}
+
 
 
