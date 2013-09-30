@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 29, 2013 at 03:04 PM
--- Server version: 5.5.24-log
--- PHP Version: 5.4.3
+-- Generation Time: Sep 30, 2013 at 04:37 PM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `trainsystem`
 --
+CREATE DATABASE IF NOT EXISTS `trainsystem` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `trainsystem`;
 
 -- --------------------------------------------------------
 
@@ -49,6 +51,101 @@ INSERT INTO `stationmaster` (`StationId`, `StationCode`, `StationName`) VALUES
 (9, 'TH', 'Thane'),
 (10, 'DR', 'DADAR'),
 (11, 'MUM CST', 'Mumbai CST');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticketbookingmaster`
+--
+
+CREATE TABLE IF NOT EXISTS `ticketbookingmaster` (
+  `TicketBookingId` int(11) NOT NULL AUTO_INCREMENT,
+  `TrainId` int(11) NOT NULL,
+  `TrainDate` varchar(10) NOT NULL,
+  `TotalTickets` int(11) NOT NULL,
+  `1A` int(11) NOT NULL,
+  `2A` int(11) NOT NULL,
+  `2S` int(11) NOT NULL,
+  `3A` int(11) NOT NULL,
+  `3E` int(11) NOT NULL,
+  `CC` int(11) NOT NULL,
+  `FC` int(11) NOT NULL,
+  `SL` int(11) NOT NULL,
+  `TicketsBooked` int(11) NOT NULL,
+  PRIMARY KEY (`TicketBookingId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+
+--
+-- Dumping data for table `ticketbookingmaster`
+--
+
+INSERT INTO `ticketbookingmaster` (`TicketBookingId`, `TrainId`, `TrainDate`, `TotalTickets`, `1A`, `2A`, `2S`, `3A`, `3E`, `CC`, `FC`, `SL`, `TicketsBooked`) VALUES
+(1, 1, '29/09/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(2, 1, '30/09/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(3, 1, '01/10/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(4, 2, '30/09/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(5, 2, '01/10/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(6, 2, '02/10/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(7, 2, '03/10/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(8, 3, '29/09/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(9, 3, '30/09/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(10, 3, '01/10/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(11, 3, '02/10/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(12, 3, '03/10/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(13, 4, '29/09/2013', 900, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(14, 4, '30/09/2013', 900, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(15, 4, '01/10/2013', 900, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(16, 4, '02/10/2013', 900, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(17, 4, '03/10/2013', 900, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(18, 5, '29/09/2013', 1500, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(19, 5, '30/09/2013', 1500, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(20, 5, '01/10/2013', 1500, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(21, 5, '02/10/2013', 1500, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(22, 5, '03/10/2013', 1500, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(23, 6, '29/09/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(24, 6, '30/09/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(25, 6, '01/10/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(26, 6, '02/10/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(27, 6, '03/10/2013', 1200, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(28, 7, '29/09/2013', 1100, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(29, 7, '30/09/2013', 1100, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(30, 7, '01/10/2013', 1100, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(31, 7, '02/10/2013', 1100, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(32, 7, '03/10/2013', 1100, 0, 0, 747, 0, 0, 250, 0, 0, 3),
+(33, 2, '29/09/2013', 1000, 0, 0, 747, 0, 0, 250, 0, 0, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticketfare`
+--
+
+CREATE TABLE IF NOT EXISTS `ticketfare` (
+  `TicketFareId` int(11) NOT NULL AUTO_INCREMENT,
+  `TrainId` int(11) NOT NULL,
+  `1A` int(11) NOT NULL,
+  `2A` int(11) NOT NULL,
+  `3A` int(11) NOT NULL,
+  `3E` int(11) NOT NULL,
+  `CC` int(11) NOT NULL,
+  `SL` int(11) NOT NULL,
+  `2S` int(11) NOT NULL,
+  `FC` int(11) NOT NULL,
+  PRIMARY KEY (`TicketFareId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `ticketfare`
+--
+
+INSERT INTO `ticketfare` (`TicketFareId`, `TrainId`, `1A`, `2A`, `3A`, `3E`, `CC`, `SL`, `2S`, `FC`) VALUES
+(1, 1, 0, 0, 0, 0, 2, 0, 1, 0),
+(2, 2, 0, 0, 0, 2, 2, 3, 1, 0),
+(3, 3, 0, 0, 0, 0, 2, 0, 1, 0),
+(4, 4, 0, 0, 0, 0, 2, 0, 1, 0),
+(5, 5, 4, 0, 0, 0, 2, 3, 1, 0),
+(6, 6, 0, 0, 0, 0, 2, 3, 1, 0),
+(7, 7, 0, 0, 0, 0, 2, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -99,26 +196,26 @@ CREATE TABLE IF NOT EXISTS `trainschedule` (
 --
 
 INSERT INTO `trainschedule` (`ScheduleId`, `TrainId`, `TrainDate`, `StationId`, `ArrivalTime`, `Departure`, `Distance`) VALUES
-(1, 1, '29/9/2013', 1, '06:00', '06:05', 0),
-(2, 1, '29/9/2013', 2, '06:10', '06:13', 10),
-(3, 1, '29/9/2013', 3, '06:18', '06:20', 20),
-(4, 1, '29/9/2013', 4, '06:28', '06:31', 30),
-(5, 1, '29/9/2013', 5, '06:33', '06:35', 50),
-(6, 1, '29/9/2013', 6, '07:13', '07:15', 100),
-(7, 1, '29/9/2013', 7, '07:58', '08:00', 150),
-(8, 1, '29/9/2013', 8, '08:42', '08:47', 175),
-(9, 1, '29/9/2013', 10, '09:33', '09:35', 200),
-(10, 1, '29/9/2013', 11, '09:53', '10:00', 250),
-(11, 1, '30/9/2013', 1, '06:00', '06:05', 0),
-(12, 1, '30/9/2013', 2, '06:10', '06:13', 10),
-(13, 1, '30/9/2013', 3, '06:18', '06:20', 20),
-(14, 1, '30/9/2013', 4, '06:28', '06:31', 30),
-(15, 1, '30/9/2013', 5, '06:33', '06:35', 50),
-(16, 1, '30/9/2013', 6, '07:13', '07:15', 100),
-(17, 1, '30/9/2013', 7, '07:58', '08:00', 150),
-(18, 1, '30/9/2013', 8, '08:42', '08:47', 175),
-(19, 1, '30/9/2013', 10, '09:33', '09:35', 200),
-(20, 1, '30/9/2013', 11, '09:53', '10:00', 250),
+(1, 1, '29/09/2013', 1, '06:00', '06:05', 0),
+(2, 1, '29/09/2013', 2, '06:10', '06:13', 10),
+(3, 1, '29/09/2013', 3, '06:18', '06:20', 20),
+(4, 1, '29/09/2013', 4, '06:28', '06:31', 30),
+(5, 1, '29/09/2013', 5, '06:33', '06:35', 50),
+(6, 1, '29/09/2013', 6, '07:13', '07:15', 100),
+(7, 1, '29/09/2013', 7, '07:58', '08:00', 150),
+(8, 1, '29/09/2013', 8, '08:42', '08:47', 175),
+(9, 1, '29/09/2013', 10, '09:33', '09:35', 200),
+(10, 1, '29/09/2013', 11, '09:53', '10:00', 250),
+(11, 1, '30/09/2013', 1, '06:00', '06:05', 0),
+(12, 1, '30/09/2013', 2, '06:10', '06:13', 10),
+(13, 1, '30/09/2013', 3, '06:18', '06:20', 20),
+(14, 1, '30/09/2013', 4, '06:28', '06:31', 30),
+(15, 1, '30/09/2013', 5, '06:33', '06:35', 50),
+(16, 1, '30/09/2013', 6, '07:13', '07:15', 100),
+(17, 1, '30/09/2013', 7, '07:58', '08:00', 150),
+(18, 1, '30/09/2013', 8, '08:42', '08:47', 175),
+(19, 1, '30/09/2013', 10, '09:33', '09:35', 200),
+(20, 1, '30/09/2013', 11, '09:53', '10:00', 250),
 (21, 1, '01/10/2013', 1, '06:00', '06:05', 0),
 (22, 1, '01/10/2013', 2, '06:10', '06:13', 10),
 (23, 1, '01/10/2013', 3, '06:18', '06:20', 20),
@@ -221,15 +318,15 @@ INSERT INTO `trainschedule` (`ScheduleId`, `TrainId`, `TrainDate`, `StationId`, 
 (120, 4, '29/09/2013', 9, '14:40', '14:42', 190),
 (121, 4, '29/09/2013', 10, '15:00', '15:02', 200),
 (122, 4, '29/09/2013', 11, '15:20', '15:25', 250),
-(123, 4, '30/9/2013', 1, '12:30', '12:35', 0),
-(124, 4, '30/9/2013', 2, '12:40', '12:43', 10),
-(125, 4, '30/9/2013', 4, '12:50', '12:53', 30),
-(126, 4, '30/9/2013', 5, '13:10', '13:13', 50),
-(127, 4, '30/9/2013', 6, '14:00', '14:03', 100),
-(128, 4, '30/9/2013', 8, '14:20', '14:23', 175),
-(129, 4, '30/9/2013', 9, '14:40', '14:42', 190),
-(130, 4, '30/9/2013', 10, '15:00', '15:02', 200),
-(131, 4, '30/9/2013', 11, '15:20', '15:25', 250),
+(123, 4, '30/09/2013', 1, '12:30', '12:35', 0),
+(124, 4, '30/09/2013', 2, '12:40', '12:43', 10),
+(125, 4, '30/09/2013', 4, '12:50', '12:53', 30),
+(126, 4, '30/09/2013', 5, '13:10', '13:13', 50),
+(127, 4, '30/09/2013', 6, '14:00', '14:03', 100),
+(128, 4, '30/09/2013', 8, '14:20', '14:23', 175),
+(129, 4, '30/09/2013', 9, '14:40', '14:42', 190),
+(130, 4, '30/09/2013', 10, '15:00', '15:02', 200),
+(131, 4, '30/09/2013', 11, '15:20', '15:25', 250),
 (132, 4, '01/10/2013', 1, '12:30', '12:35', 0),
 (133, 4, '01/10/2013', 2, '12:40', '12:43', 10),
 (134, 4, '01/10/2013', 4, '12:50', '12:53', 30),
@@ -347,14 +444,26 @@ INSERT INTO `trainschedule` (`ScheduleId`, `TrainId`, `TrainDate`, `StationId`, 
 CREATE TABLE IF NOT EXISTS `trainticketbooking` (
   `BookingId` int(5) NOT NULL AUTO_INCREMENT,
   `TrainId` int(5) NOT NULL,
-  `TicketId` int(5) NOT NULL,
-  `ScheduleId` int(5) NOT NULL,
-  `PassengerName` varchar(50) NOT NULL,
-  `Age` int(5) NOT NULL,
-  `Sex` varchar(6) NOT NULL,
-  `SC` tinyint(1) NOT NULL,
+  `TicketFareId` int(5) NOT NULL,
+  `ScheduleFromId` int(5) NOT NULL,
+  `ScheduleToId` int(11) NOT NULL,
+  `TicketBookingMasterId` int(11) NOT NULL,
+  `BookingDate` varchar(10) NOT NULL,
+  `UserId` int(11) NOT NULL,
+  `Quantity` int(11) NOT NULL,
   PRIMARY KEY (`BookingId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `trainticketbooking`
+--
+
+INSERT INTO `trainticketbooking` (`BookingId`, `TrainId`, `TicketFareId`, `ScheduleFromId`, `ScheduleToId`, `TicketBookingMasterId`, `BookingDate`, `UserId`, `Quantity`) VALUES
+(1, 1, 1, 1, 9, 1, '29/09/2013', 1, 1),
+(2, 1, 1, 1, 9, 1, '29/09/2013', 1, 1),
+(3, 1, 1, 1, 9, 1, '29/09/2013', 1, 1),
+(4, 1, 1, 1, 9, 1, '29/09/2013', 1, 1),
+(5, 1, 1, 1, 9, 1, '29/09/2013', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -400,6 +509,10 @@ CREATE TABLE IF NOT EXISTS `usert` (
   `UserId` int(5) NOT NULL AUTO_INCREMENT,
   `Username` varchar(50) NOT NULL,
   `Password` varchar(50) NOT NULL,
+  `Name` varchar(200) NOT NULL,
+  `Age` int(11) NOT NULL,
+  `Sex` varchar(6) NOT NULL,
+  `MobileNo` varchar(10) NOT NULL,
   PRIMARY KEY (`UserId`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
@@ -407,9 +520,9 @@ CREATE TABLE IF NOT EXISTS `usert` (
 -- Dumping data for table `usert`
 --
 
-INSERT INTO `usert` (`UserId`, `Username`, `Password`) VALUES
-(1, 'dev', 'dev'),
-(2, 'manas', 'manas');
+INSERT INTO `usert` (`UserId`, `Username`, `Password`, `Name`, `Age`, `Sex`, `MobileNo`) VALUES
+(1, 'dev', 'dev', 'Devang Pandya', 24, 'Male', '9833555160'),
+(2, 'manas', 'manas', 'Manas Mehta', 24, 'Male', '9769491519');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
