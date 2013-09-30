@@ -55,6 +55,7 @@ function btnConfirmBookingClick(){
         },
         success: function(data) {
             alert("Your Ticket has been Confirmed..\nBooking Id = " + data);
+            window.location = "index.jsp";
         }
     });
 }

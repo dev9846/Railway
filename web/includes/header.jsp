@@ -5,11 +5,11 @@
     <ul>
         <li>
            <img src="<%=request.getContextPath()%>/images/home.png" />
-            <a href="#"><span class="menu-icon">Home</span></a>
+            <a href="index.jsp"><span class="menu-icon">Home</span></a>
         </li>
         <li>
             <img src="<%=request.getContextPath()%>/images/cal.png" />
-            <a href="#"><span class="menu-icon">Plan Travel</span></a>
+            <a href="PlanTravel.jsp"><span class="menu-icon">Plan Travel</span></a>
         </li>
     </ul>
     
