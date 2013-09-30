@@ -67,6 +67,10 @@ public class TicketFareData {
                 tbm.setSL(rs.getInt("SL"));
             }
         } catch (SQLException se) {
+            System.out.println(""+se);
+        }
+         catch(Exception ex){
+            System.out.print(ex);
         }
         return tbm;
     }

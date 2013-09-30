@@ -13,10 +13,10 @@
     <div class="center">
         <%@include file="includes/header.jsp" %>
         <br/>
-        hello world
+        Welcome to Railway Reservation!
 
         <div class="login">
-            <form method="post" action="controllers/_Login.jsp">
+            <form method="post" action="LoginController">
                 <h2 style="font-family: calibri">Login</h2>
                 <input type="text" name="txtUsername" style="width: 85%;" class="input" placeholder="Username"/><br/><br/>
                 <input type="password" name="txtPass" style="width: 85%;" class="input" placeholder="Password"/><br/>

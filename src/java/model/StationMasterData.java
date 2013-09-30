@@ -66,7 +66,7 @@ public class StationMasterData {
     public StationMaster getStation(String stationName) {
 
 
-        ResultSet rs = db.getResultSet("Select * From StationMaster where StationName = " + stationName);
+        ResultSet rs = db.getResultSet("Select * From StationMaster where StationName = '" + stationName + "'");
         StationMaster station = new StationMaster();
 
         try {

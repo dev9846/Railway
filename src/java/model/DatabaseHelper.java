@@ -25,6 +25,28 @@ public class DatabaseHelper {
         //get from web.config
     }
     
+    public int executeQuery(String sqlQuery){
+        int res = 0;
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("Here");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trainsystem?zeroDateTimeBehavior=convertToNull","dev","dev");
+           // con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trainsystem?zeroDateTimeBehavior=convertToNull","root","");
+            System.out.println("after con");
+            Statement stmt = con.createStatement();
+            res = stmt.executeUpdate(sqlQuery);
+            
+           System.out.println("after query");
+            //stmt.executeQuery(sqlQuery);
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DatabaseHelper.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseHelper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return res;
+    }
+    
     public ResultSet getResultSet(String sqlQuery) {
 
         try {
@@ -35,6 +57,7 @@ public class DatabaseHelper {
             System.out.println("after con");
             Statement stmt = con.createStatement();
             rs = stmt.executeQuery(sqlQuery);
+            
            System.out.println("after query");
             //stmt.executeQuery(sqlQuery);
             

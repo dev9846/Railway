@@ -42,6 +42,7 @@ public class TrainTicketBookingData {
                 booking.setTicketFareId(rs.getInt("TicketFareId"));
                 booking.setTicketBookingMasterId(rs.getInt("TicketBookingMasterId"));
                 booking.setBookingDate(rs.getString("BookingDate"));
+                booking.setQuantity(rs.getInt("Quantity"));
                 
                 bookings.add(booking);
             }
@@ -68,6 +69,7 @@ public class TrainTicketBookingData {
                 booking.setTicketFareId(rs.getInt("TicketFareId"));
                 booking.setTicketBookingMasterId(rs.getInt("TicketBookingMasterId"));
                 booking.setBookingDate(rs.getString("BookingDate"));
+                booking.setQuantity(rs.getInt("Quantity"));
                 
             }
         } catch (SQLException se) {
@@ -89,6 +91,6 @@ public class TrainTicketBookingData {
     }
     
     public void insertTrainTicketBooking(TrainTicketBooking ttb) {
-        db.getResultSet("Insert into TrainTicketBooking Values(null, " + ttb.getTrainId() + ", " + ttb.getTicketFareId() + "," + ttb.getScheduleFromId() + ", " + ttb.getScheduleToId() + ", " + ttb.getTicketBookingMasterId() + ", '" + ttb.getBookingDate() + "', " + ttb.getUserId() + ")");
+        db.getResultSet("Insert into TrainTicketBooking Values(null, " + ttb.getTrainId() + ", " + ttb.getTicketFareId() + "," + ttb.getScheduleFromId() + ", " + ttb.getScheduleToId() + ", " + ttb.getTicketBookingMasterId() + ", '" + ttb.getBookingDate() + "', " + ttb.getUserId() + ", "+ttb.getQuantity()+")");
     }
 }

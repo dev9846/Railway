@@ -10,7 +10,7 @@ package DbClasses;
  */
 public class TrainTicketBooking {
     
-    private int bookingId, trainId, ticketBookingMasterId, scheduleToId, scheduleFromId, ticketFareId, userId ;
+    private int bookingId, trainId, ticketBookingMasterId, scheduleToId, scheduleFromId, ticketFareId, userId, quantity ;
     private String BookingDate ;
 
     /**
@@ -123,6 +123,20 @@ public class TrainTicketBooking {
      */
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    /**
+     * @return the quantity
+     */
+    public int getQuantity() {
+        return quantity;
+    }
+
+    /**
+     * @param quantity the quantity to set
+     */
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
     
     
